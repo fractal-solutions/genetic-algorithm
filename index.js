@@ -86,9 +86,62 @@ class GeneticAlgorithm {
       }
     }
   }
+
+  class NumericGeneticAlgorithm extends GeneticAlgorithm {
+    fitnessFunction(chromosome) {
+      // Assume targetValue is a predefined target
+      const targetValue = 42;
+      return 1 / Math.abs(parseFloat(chromosome) - targetValue);
+    }
+  }
+
+  class BinaryGeneticAlgorithm extends GeneticAlgorithm {
+    generateRandomChromosome() {
+      let chromosome = '';
+      for (let i = 0; i < this.chromosomeLength; i++) {
+        chromosome += Math.random() < 0.5 ? '0' : '1';
+      }
+      return chromosome;
+    }
   
+    fitnessFunction(chromosome) {
+      // Implement a fitness function for binary strings
+      // Example: Count the number of '1's in the string
+      return chromosome.split('1').length - 1;
+    }
+  }
+
+  class CombinatorialGeneticAlgorithm extends GeneticAlgorithm {
+    generateRandomChromosome() {
+      // Implement logic for generating a random permutation
+      const array = Array.from({ length: this.chromosomeLength }, (_, index) => index + 1);
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array.join('');
+    }
+  
+    fitnessFunction(chromosome) {
+      // Implement a fitness function for combinatorial optimization
+      // Example: Evaluate the quality of a permutation based on a specific criterion
+      return chromosome.split('').reverse().join('');
+    }
+  }
+  
+
+
+
+
   // Example usage:
   const targetString = "Hello World!";
   const ga = new GeneticAlgorithm(100, targetString.length, targetString);
   ga.run(100);
+
+
+  const numericGA = new NumericGeneticAlgorithm(100, 1, null);
+  //numericGA.run(100);
+
+  const binaryGA = new BinaryGeneticAlgorithm(100, 10, null);
+  //binaryGA.run(50);
   
