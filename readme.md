@@ -1,5 +1,7 @@
 # Use
 run 'node index' from the directory
+The code will run a standard Genetic Algorithm that fills out "Hello World" then
+it will run a Binary Algorithm that fills out binary from expected value in the BinaryGeneticAlgorithm class definition. 
 
 # Genetic Algorithm Report
 ## Introduction
