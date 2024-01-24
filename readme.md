@@ -44,6 +44,6 @@ The flexibility of the genetic algorithm allows it to be adapted to various opti
 ## Conclusion
 The genetic algorithm presented in this report provides a robust framework for solving optimization problems. Its adaptability makes it a valuable tool in AI programming, allowing developers to tackle a wide range of problems by customizing specific components of the algorithm.
 
-Through the provided examples, it is evident that the same genetic algorithm structure can be applied to different types of optimization problems with minimal modifications. This flexibility is a key strength, and developers can experiment with additional problem domains by further customizing the algorithm.
+The same genetic algorithm structure can be applied to different types of optimization problems with minimal modifications. This flexibility is a key strength, and developers can experiment with additional problem domains by further customizing the algorithm.
 
 Overall, the genetic algorithm serves as a powerful optimization tool, offering a balance between exploration and exploitation in the search for optimal solutions.
