@@ -1,3 +1,6 @@
+# Use
+run 'node index' from the directory
+
 # Genetic Algorithm Report
 ## Introduction
 The Genetic Algorithm (GA) is a versatile optimization algorithm inspired by the process of natural selection. It is widely used for solving optimization problems in various domains. The purpose of this report is to document the design, implementation, and application of a genetic algorithm developed for the AI Programming assignment.
