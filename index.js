@@ -136,7 +136,7 @@ class GeneticAlgorithm {
   // Example usage:
   const targetString = "Hello World!";
   const ga = new GeneticAlgorithm(100, targetString.length, targetString);
-  ga.run(100);
+  ga.run(200);
 
 
   const numericGA = new NumericGeneticAlgorithm(100, 1, null);
